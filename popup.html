@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Popup</title>
+	<style type="text/css">
+		#popupn{
+			position: fixed; /* or absolute */
+  			top: 15%;
+  			left: 30%;
+			display: none;
+			background: #ffffff;
+			overflow: hidden;
+			max-width: 620px;
+			width: 100%;
+			}
+			#popupn img {
+				width: 100%;
+				height: auto;;
+				display: block;
+
+			}
+		.contentP {
+			position: relative;
+		}
+		#closePop {
+			position: absolute;
+			top: 30px;
+			right: 30px;
+		}
+		.contentpop {
+			padding: 15px;
+		}
+		.bgDark {
+			background-color: rgba(0,0,0,0.4);
+		}
+		#closePop {
+			font-weight: bold;
+			font-size: 25px;
+			text-decoration: none;
+			color: #fff;
+/*			transform: rotate(-35deg);
+*/		}
+		a {
+			text-decoration: none;
+			color: #000;
+		}
+		.btnDes {
+			padding: 15px;
+			color: #fff;
+			background: #01a3d2;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+<a href="#" id="bPopup" onclick="displayPop()">deschide popup</a>
+<div class="body ">
+	<div id="popupn">
+		<div class="contentP">
+			<a href="#" id="closePop" onclick="closePop()">X</a> 
+		<div class="headerpop">
+			<img src="nelpop.jpg">
+		</div>
+		<div class="contentpop">
+			<p>Acum ai doar beneficii in reteaua noastra.</p>
+			<strong><p>Invita-ti prietenii tai antreprenori din alte retele in reteau BT si beneficiati impreuna de avantajele pachetului "Nelimitat in reteaua BT".</p></strong>
+			<p>Iti punem la dispozitie o prezentare completa a pachetului prin care poti sa iti informezi partenerii de afaceri de beneficiile pe care le aveti.</p>
+			<p>&nbsp;</p>
+			<p><a href="" class="btnDes">Descarca prezentarea</a></p>
+		</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+function displayPop() {
+   document.getElementById('popupn').style.display = "block";
+   var z = document.body;
+	document.body.classList.add('bgDark');
+
+}
+function closePop() {
+   document.getElementById('popupn').style.display = "none";
+   var z = document.body;
+	document.body.classList.remove('bgDark');
+}
+
+</script>
+</body>
+</html>
